@@ -5,7 +5,7 @@ from .form import PersonaForm
 # Create your views here.
 def listarUsuarios(request):
     personas = Persona.objects.all()
-    return render(request,"listarUsuarios.html",{'personas':personas})
+    return render(request,'listarUsuarios.html',{'personas':personas})
 def registrarUsuario(request):
     if request.method == 'POST':
         form = PersonaForm(request.POST)
